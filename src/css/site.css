@@ -307,3 +307,33 @@ h2 {
   height: 72px;
   margin-bottom: var(--space-xs);
 }
+
+/* --- Start-CTA und Themen-Auswahl auf der Startseite --- */
+
+.card--start {
+  justify-content: center;
+  background: var(--color-peach);
+  font-size: calc(1rem * var(--font-scale-lg));
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.start-picker h2 {
+  margin-top: 0;
+}
+
+.install-link {
+  margin-top: var(--space-xl);
+  text-align: center;
+}
+
+.install-link a {
+  color: var(--color-ginger-ink);
+}
+
+.next-empty {
+  font-weight: 600;
+}
+
+.next-empty a {
+  color: var(--color-ginger-ink);
+}

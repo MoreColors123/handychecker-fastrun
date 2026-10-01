@@ -14,13 +14,20 @@ title: HandyChecker – Finde deine Balance
       <h1>Hi, ich bin Happi 🧡</h1>
     </div>
     <p>Hier findest du fünf Themen rund um dein Handy – mit Fakten, Fragen und echten Tipps.
-       Nichts wird gespeichert: Diese Seite kann das gar nicht.</p>
-    <p><a class="card" href="{{ '/installieren/' | url }}">📲 App aufs Handy holen</a></p>
-    <ul class="topic-cards">
-      {%- for topic in topics %}
-      <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}</a></li>
-      {%- endfor %}
-    </ul>
+       Nichts wird ins Internet gesendet – alles bleibt bei dir.</p>
+
+    <p><a class="card card--start" href="#themen">▶ Start</a></p>
+
+    <section id="themen" class="start-picker">
+      <h2>Welches Thema möchtest du zuerst anschauen?</h2>
+      <ul class="topic-cards">
+        {%- for topic in topics %}
+        <li><a class="card" href="{{ ('/themen/' + topic.slug + '/') | url }}">{{ topic.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+
+    <p class="install-link"><a href="{{ '/installieren/' | url }}">📲 App aufs Handy holen</a></p>
   </main>
   {% include "footer.njk" %}
 </body>

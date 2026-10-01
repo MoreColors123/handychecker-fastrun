@@ -1,11 +1,68 @@
-// HandyChecker – Selbstcheck-Verbesserer (SELF-01).
-// Basis: CSS :has() zeigt die Reflexion ohne JS (in :has()-fähigen Browsern).
-// Dieses Skript ergänzt zwei Dinge:
-//   1. Screenreader-Ankündigung über die aria-live-Region.
-//   2. Einen winzigen Fallback für Browser OHNE :has() – dort wird die
-//      gewählte Reflexion per Inline-Style eingeblendet.
-// Keine Speicherung: Antworten leben im DOM (Radio checked), Reload = vergessen.
+// HandyChecker – zwei progressive Verbesserungen.
+//
+// 1) Selbstcheck (SELF-01): Die Reflexion erscheint rein per CSS
+//    (:has(input:checked)); dieses Skript ergänzt nur die
+//    Screenreader-Ankündigung (aria-live) und einen Mini-Fallback für
+//    Browser ohne :has().
+// 2) "Gesehene Themen": Auf einer Themenseite wird gemerkt, dass sie
+//    angeschaut wurde; bereits gesehene Themen verschwinden aus der
+//    "Womit willst du weitermachen?"-Liste.
+//
+// Gespeichert wird NUR lokal auf dem Gerät (localStorage) und ausschließlich
+// eine Liste von Themennamen – nichts wird gesendet, nichts über die Person.
 (function () {
+  var SEEN_KEY = "handychecker.seen";
+
+  function readSeen() {
+    try {
+      var list = JSON.parse(window.localStorage.getItem(SEEN_KEY) || "[]");
+      return Array.isArray(list) ? list : [];
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function writeSeen(list) {
+    try {
+      window.localStorage.setItem(SEEN_KEY, JSON.stringify(list));
+    } catch (e) {
+      /* privater Modus o. Ä. – dann eben ohne Erinnerung */
+    }
+  }
+
+  // --- gesehene Themen -------------------------------------------------
+  var topicEl = document.querySelector("[data-topic]");
+  if (topicEl) {
+    var slug = topicEl.getAttribute("data-topic");
+    var seen = readSeen();
+    if (slug && seen.indexOf(slug) === -1) {
+      seen.push(slug);
+      writeSeen(seen);
+    }
+
+    var cards = document.querySelectorAll(".next .card[data-slug]");
+    var remaining = 0;
+    cards.forEach(function (card) {
+      if (seen.indexOf(card.getAttribute("data-slug")) !== -1) {
+        var li = card.closest("li");
+        if (li) li.style.display = "none";
+      } else {
+        remaining++;
+      }
+    });
+    if (cards.length && remaining === 0) {
+      var empty = document.querySelector(".next-empty");
+      if (empty) empty.hidden = false;
+    }
+  }
+
+  document.querySelectorAll("[data-reset]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      writeSeen([]);
+    });
+  });
+
+  // --- Selbstcheck -----------------------------------------------------
   var groups = document.querySelectorAll(".selfcheck__group");
   if (!groups.length) return;
 

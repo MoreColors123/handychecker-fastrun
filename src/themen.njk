@@ -20,7 +20,7 @@ eleventyComputed:
       <a class="back" href="{{ '/' | url }}">‹ Start</a>
     </nav>
   </header>
-  <main id="inhalt">
+  <main id="inhalt" data-topic="{{ topic.slug }}">
     <div class="topic-happi">{% include "happi.njk" %}</div>
     <h1>{{ topic.title }}</h1>
     <p class="intro">{{ topic.intro }}</p>
@@ -64,9 +64,10 @@ eleventyComputed:
       <h2>Womit willst du weitermachen?</h2>
       <ul class="topic-cards">
         {% for t in topics %}{% if t.slug != topic.slug %}
-        <li><a class="card" href="{{ ('/themen/' + t.slug + '/') | url }}">{{ t.title }}</a></li>
+        <li><a class="card" data-slug="{{ t.slug }}" href="{{ ('/themen/' + t.slug + '/') | url }}">{{ t.title }}</a></li>
         {% endif %}{% endfor %}
       </ul>
+      <p class="next-empty" hidden>Du hast schon alle Themen angeschaut. 🎉 <a href="{{ '/' | url }}" data-reset>Nochmal von vorn</a></p>
     </section>
   </main>
   <script src="{{ '/js/app.js' | url }}" defer></script>

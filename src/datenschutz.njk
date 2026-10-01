@@ -14,15 +14,20 @@ suffixTitle: true
   </header>
   <main id="inhalt">
     <h1>Datenschutz – was passiert mit deinen Daten?</h1>
-    <p><strong>Hier wird nichts gespeichert – die Seite kann das gar nicht.</strong></p>
-    <p>Diese Seite fragt dich nicht nach deinem Namen, schickt keine Daten an andere
-       Rechner und nutzt keine Cookies. Alles bleibt auf deinem Handy.</p>
+    <p><strong>Diese Seite schickt nichts ins Internet. Alles bleibt bei dir auf dem Handy.</strong></p>
+    <p>Diese Seite fragt dich nicht nach deinem Namen und nutzt keine Cookies.</p>
+    <p>Damit sie weiß, welche Themen du schon angeschaut hast, merkt sich dein Handy
+       die Namen dieser Themen – nur bei dir, ganz allein. Es wird nichts gesendet.</p>
     <h2>Hinweis für Eltern</h2>
-    <p>HandyChecker speichert keinerlei personenbezogene Daten. Es gibt keine Konten,
-       keine Analysen, keine Tracking-Cookies und keine Einbindungen Dritter
-       (z.&nbsp;B. keine externen Schriften oder Videos). Beim Aufruf werden ausschließlich
-       die Seiteninhalte dieser Domain geladen. Details: Hosting-Logs des gewählten
-       Anbieters. Für den Inhalt verantwortlich: siehe <a href="{{ '/impressum/' | url }}">Impressum</a>.</p>
+    <p>HandyChecker speichert keine personenbezogenen Daten und überträgt keine Daten an Dritte.
+       Es gibt keine Konten, keine Analysen (kein Tracking), keine Cookies und keine
+       Einbindungen Dritter (z.&nbsp;B. keine externen Schriften oder Videos). Zur Navigation
+       merkt sich die Seite ausschließlich lokal im Browser (<code>localStorage</code>), welche
+       der Themenseiten bereits besucht wurden – eine Liste von Themennamen ohne jeden
+       Personenbezug, die das Gerät nie verlässt und nichts über die Person aussagt.
+       Beim Aufruf werden nur die Inhalte dieser Domain geladen. Details zu Server-Logs:
+       Hosting-Anbieter. Verantwortlich: siehe
+       <a href="{{ '/impressum/' | url }}">Impressum</a>.</p>
   </main>
   {% include "footer.njk" %}
 </body>
