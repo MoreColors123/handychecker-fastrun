@@ -1,0 +1,272 @@
+[
+  {
+    "slug": "bildschirmzeit",
+    "title": "Bildschirmzeit & Balance",
+    "intro": "Hallo, ich bin Happi. 🧡 „Bildschirmzeit“ klingt wie eine Zahl, die man zählen muss. Dabei geht es um etwas Schöneres: wie du dich mit deinem Handy fühlst.",
+    "facts": [
+      {
+        "heading": "Was Bildschirmzeit ist",
+        "text": "Bildschirmzeit ist alles, was du am Bildschirm machst. Musik hören zählt zum Beispiel dazu – es fühlt sich aber anders an als Scrollen. Es gibt keine Zahl, die für alle Menschen gleich gut passt."
+      },
+      {
+        "heading": "Warum sich Zeit manchmal zieht",
+        "text": "Apps sind so gebaut, dass immer wieder etwas Neues kommt. Dann will man kurz weitermachen – und bleibt länger hängen. Das ist keine Schwäche. Das geht fast allen so."
+      },
+      {
+        "heading": "Was Balance heißt",
+        "text": "Balance heißt nicht „weniger Handy“. Balance heißt: Du merkst, wie es dir geht – und entscheidest dann. Mal viel, mal wenig. Beides darf sein."
+      }
+    ],
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Musik, Freundinnen schreiben, lernen, lachen, Ideen finden – das alles macht Spaß. Musik zählt für die Balance sogar gar nicht richtig mit. Dein Handy ist nicht böse. Es ist ein Werkzeug, das du benutzt."
+    },
+    "selfCheck": {
+      "question": "Wenn du dein Handy weglegst – wie geht es dir damit?",
+      "options": [
+        {
+          "emoji": "🙂",
+          "label": "Ich lege es weg und mache etwas anderes.",
+          "reflection": "Schön, dass du leicht wechseln kannst – genau das ist Balance."
+        },
+        {
+          "emoji": "🐢",
+          "label": "Die Zeit vergeht schnell, wenn ich dran bin.",
+          "reflection": "Dass die Zeit schnell weg ist, kennen viele. Ein Timer kann dir helfen."
+        },
+        {
+          "emoji": "🌀",
+          "label": "Ich würde gern weitermachen, auch wenn ich schon müde bin.",
+          "reflection": "Weitermachen, obwohl du müde bist – das kenne ich. Dein Körper gibt dir einen guten Hinweis."
+        },
+        {
+          "emoji": "🤔",
+          "label": "Mal so, mal so – ganz unterschiedlich.",
+          "reflection": "Mal so, mal so ist völlig normal. Es gibt keinen richtigen Wert."
+        }
+      ]
+    },
+    "tips": [
+      "Wenn du magst: mach nach einer Runde Scrollen eine kurze Pause und schau aus dem Fenster.",
+      "Probier mal einen Timer: 20 Minuten – danach entscheidest du neu.",
+      "Such dir etwas Schönes für die Pause: Musik, rausgehen, lesen."
+    ],
+    "next": ["schlaf", "aufmerksamkeit"]
+  },
+  {
+    "slug": "schlaf",
+    "title": "Schlaf",
+    "intro": "Hallo, ich bin Happi. 🧡 Bei dir macht das Handy ab 20 Uhr Feierabend – jeden Tag, auch am Wochenende. Das ist keine Strafe, sondern eine richtig gute Idee. Schauen wir uns an, warum.",
+    "facts": [
+      {
+        "heading": "Dein Körper hat einen Abend-Modus",
+        "text": "Wenn es dunkel wird, fährt dein Körper langsam runter. Er wird müde und bereitet sich aufs Schlafen vor. Helles Licht kann ihn wieder aufwecken – deshalb ist es abends ruhiger besser."
+      },
+      {
+        "heading": "Auch dein Kopf braucht Ruhe",
+        "text": "Nicht nur das Licht macht wach – spannende Chats und Spiele tun es auch. Deine 20-Uhr-Sperre hilft deinem Kopf, zur Ruhe zu kommen. Sie ist wie eine Landebahn für deinen Abend."
+      },
+      {
+        "heading": "Dein Handy schläft woanders",
+        "text": "Nachts ist dein Handy nicht in deinem Zimmer. Dann musst du nicht überlegen, ob du noch mal schaust. So gehört die Nacht einfach dir."
+      }
+    ],
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Ein Abend ohne Handy ist kein leerer Abend. Musik hören, lesen, mit jemandem reden, zusammen einen Film schauen – das gehört alles dazu. „Feierabend“ heißt nicht „Verbot“. Es heißt: Zeit für alles andere."
+    },
+    "selfCheck": {
+      "question": "Wie klingt dein Abend für dich aus?",
+      "options": [
+        {
+          "emoji": "🌙",
+          "label": "Ich werde von selbst müde und schlafe gut ein.",
+          "reflection": "Schön – dein Körper weiß, wann Schlafenszeit ist."
+        },
+        {
+          "emoji": "📖",
+          "label": "Ich lese oder höre noch etwas – das hilft mir runterzukommen.",
+          "reflection": "Lesen als Landebahn ist eine feine Sache."
+        },
+        {
+          "emoji": "💬",
+          "label": "Ich rede abends noch gern mit jemandem.",
+          "reflection": "Reden macht den Kopf ruhiger. Gut, wenn du das hast."
+        },
+        {
+          "emoji": "🤔",
+          "label": "Das ist bei mir ganz unterschiedlich.",
+          "reflection": "Ganz unterschiedlich ist völlig normal."
+        }
+      ]
+    },
+    "tips": [
+      "Wenn du magst: dimme 30 Minuten vor dem Schlafen das Licht kleiner.",
+      "Probier mal eine kleine Abend-Routine: Zähne, Pyjama, noch zehn Minuten lesen.",
+      "Frag deine Familie nach einem Filmabend – zusammen schauen ist etwas Schönes."
+    ],
+    "next": ["bildschirmzeit", "aufmerksamkeit"]
+  },
+  {
+    "slug": "aufmerksamkeit",
+    "title": "Aufmerksamkeit & Fokus",
+    "intro": "Hallo, ich bin Happi. 🧡 Kennst du das, wenn du etwas liest und plötzlich pingt es? Deine Aufmerksamkeit ist wie ein Scheinwerfer. Schauen wir, wie er bei dir leuchtet.",
+    "facts": [
+      {
+        "heading": "Deine Aufmerksamkeit ist ein Scheinwerfer",
+        "text": "Dein Gehirn kann sich immer nur auf eine Sache richtig konzentrieren. Alles andere tritt in den Hintergrund. Das ist ganz normal – und sogar sehr praktisch."
+      },
+      {
+        "heading": "Was dich unterbricht",
+        "text": "Ein Piepen, ein Vibrieren, ein neues Bild – schon bist du weg. Danach dauert es einen Moment, bis du wieder drin bist. Das passiert allen. Nicht nur dir."
+      },
+      {
+        "heading": "Zurückkommen kann man üben",
+        "text": "Du kannst lernen, deine Aufmerksamkeit wieder einzusammeln. Es ist wie ein Muskel: Jedes Zurückkommen macht ihn stärker. Konzentration ist kein Talent – sie ist Übung."
+      }
+    ],
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Wenn du dich ganz auf etwas einlässt, macht es richtig Spaß. Beim Spielen, Lesen, Malen oder Bauen vergisst du die Zeit. Dieses Eintauchen ist ein tolles Gefühl – dein Gehirn liebt es."
+    },
+    "selfCheck": {
+      "question": "Was passiert bei dir, wenn es piept oder vibriert?",
+      "options": [
+        {
+          "emoji": "🎯",
+          "label": "Meistens gar nichts – ich bin gerade woanders.",
+          "reflection": "Stark – wenn du vertieft bist, holt dich wenig raus."
+        },
+        {
+          "emoji": "👀",
+          "label": "Ich schaue kurz und mache dann weiter.",
+          "reflection": "Kurz schauen und weitermachen ist genau der Trick: Der Scheinwerfer bleibt an."
+        },
+        {
+          "emoji": "🌀",
+          "label": "Ich bin sofort weg und bleibe hängen.",
+          "reflection": "Sofort weg sein kennen viele. Leisere Benachrichtigungen können helfen."
+        },
+        {
+          "emoji": "🤔",
+          "label": "Kommt drauf an, was ich gerade mache.",
+          "reflection": "Ganz nach Situation – völlig normal."
+        }
+      ]
+    },
+    "tips": [
+      "Wenn du magst: stell die Benachrichtigungen eine Weile auf leise.",
+      "Probier mal: eine Sache zur Zeit – und die anderen Tabs kurz zu.",
+      "Wenn du hängen bleibst: einmal tief durchatmen und fragen: „War das gerade wichtig?“"
+    ],
+    "next": ["bildschirmzeit", "koerper"]
+  },
+  {
+    "slug": "koerper",
+    "title": "Körper (Haltung & Augen)",
+    "intro": "Hallo, ich bin Happi. 🧡 Dein Körper ist schlau. Er meldet sich, wenn er eine Pause braucht. Wir schauen, woran du das merkst.",
+    "facts": [
+      {
+        "heading": "Dein Nacken mag Abwechslung",
+        "text": "Wenn du lange gleich sitzt, wird dein Nacken steif. Die Schultern ziehen hoch und fühlen sich schwer an. Das ist kein Schaden – nur eine Bitte um Bewegung."
+      },
+      {
+        "heading": "Deine Augen werden müde",
+        "text": "Wenn du lange nah schaust, werden deine Augen müde. Sie fühlen sich trocken oder schwer an. Eine kurze Pause in die Ferne tut ihnen sofort gut."
+      },
+      {
+        "heading": "Was stimmt – was nicht",
+        "text": "Blaues Licht macht deine Augen nicht kaputt. Aber wenig Zeit draußen kann den Augen langfristig weniger guttun. Deshalb ist Rausgehen die beste Augen-Pause überhaupt."
+      }
+    ],
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Dein Körper kann unglaublich viel – rennen, tanzen, klettern, kuscheln. Bewegung fühlt sich gut an und macht den Kopf frei. Gute Haltung heißt nicht still sitzen. Sie heißt: sich wohlfühlen."
+    },
+    "selfCheck": {
+      "question": "Woran merkst du, dass dein Körper eine Pause braucht?",
+      "options": [
+        {
+          "emoji": "🦒",
+          "label": "Mein Nacken wird steif und die Schultern ziehen hoch.",
+          "reflection": "Guter Hinweis – Strecken hilft sofort."
+        },
+        {
+          "emoji": "👁️",
+          "label": "Meine Augen werden müde oder trocken.",
+          "reflection": "Müde Augen kennen viele. Die 20-20-20-Regel ist ein schöner Trick."
+        },
+        {
+          "emoji": "🤸",
+          "label": "Ich muss mich einfach strecken und bewegen.",
+          "reflection": "Strecken und bewegen ist genau das, was dein Körper will."
+        },
+        {
+          "emoji": "🤔",
+          "label": "Ehrlich? Ich merke das gar nicht so.",
+          "reflection": "Das merken viele nicht. Vielleicht achtest du einen Tag mal darauf."
+        }
+      ]
+    },
+    "tips": [
+      "Nach 20 Minuten Bildschirm: 20 Sekunden weit in die Ferne schauen – aus dem Fenster.",
+      "Wenn du magst: streck dich kurz – Nacken, Schultern, Arme.",
+      "Dreh eine Runde raus. Draußen sein ist die beste Pause für Augen und Kopf."
+    ],
+    "next": ["aufmerksamkeit", "datenschutz"]
+  },
+  {
+    "slug": "datenschutz",
+    "title": "Datenschutz & Daten",
+    "intro": "Hallo, ich bin Happi. 🧡 Hier erfährst du, was mit deinen Daten im Internet passiert. Klingt trocken? Keine Sorge – es geht um dich und deine Entscheidungen.",
+    "facts": [
+      {
+        "heading": "Apps sammeln Daten über dich",
+        "text": "Viele Apps merken sich, was du magst und gern anschaust. Damit zeigen sie dir passende Werbung. Deine Daten sind für manche Firmen wertvoll."
+      },
+      {
+        "heading": "Du entscheidest mit",
+        "text": "Bevor eine App etwas darf, fragt sie normalerweise um Erlaubnis. Du kannst „Nein“ zu Kamera, Mikrofon oder Standort sagen. Nein zu sagen ist völlig in Ordnung."
+      },
+      {
+        "heading": "Was diese Seite macht",
+        "text": "Diese Seite speichert nichts über dich. Kein Name, kein Konto, keine Nachverfolgung. Sie kann das auch gar nicht."
+      }
+    ],
+    "balance": {
+      "heading": "Was ist daran eigentlich gut?",
+      "text": "Das Internet verbindet dich mit Menschen und Wissen. Du kannst lernen, spielen, Ideen teilen und Freunde sehen. Wenn du weißt, was passiert, kannst du es gut für dich nutzen."
+    },
+    "selfCheck": {
+      "question": "Wie gehst du mit Erlaubnissen und persönlichen Infos um?",
+      "options": [
+        {
+          "emoji": "🛡️",
+          "label": "Ich schaue meistens nach, was eine App darf.",
+          "reflection": "Super – hinschauen ist genau der erste Schritt."
+        },
+        {
+          "emoji": "🙂",
+          "label": "Ich sage Nein, wenn mir etwas komisch vorkommt.",
+          "reflection": "Ein komisches Gefühl ist ein guter Begleiter. Hör darauf."
+        },
+        {
+          "emoji": "🤷",
+          "label": "Ich erlaube oft einfach – ohne lange zu lesen.",
+          "reflection": "Schnell erlauben geht allen mal so. Du kannst es jederzeit ändern."
+        },
+        {
+          "emoji": "🤔",
+          "label": "Kommt ganz drauf an.",
+          "reflection": "Ganz nach App – völlig normal."
+        }
+      ]
+    },
+    "tips": [
+      "Wenn du magst: schau bei einer App nach, welche Erlaubnisse sie hat.",
+      "Überleg dir: Welche Infos würdest du nie teilen? (Name, Schule, Adresse.)",
+      "Frag deine Eltern, wenn dir etwas komisch vorkommt – gemeinsam geht's leichter."
+    ],
+    "next": ["koerper", "bildschirmzeit"]
+  }
+]
