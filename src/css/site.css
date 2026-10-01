@@ -118,7 +118,7 @@ footer nav a:focus-visible {
 /* --- topic page --- */
 
 h2 {
-  font-size: calc(1rem * var(--font-scale-lg));
+  font-size: calc(1rem * var(--font-scale-h2));
   line-height: 1.25;
   margin: var(--space-lg) 0 var(--space-sm);
 }
@@ -229,4 +229,29 @@ h2 {
 
 .tips li {
   margin-bottom: var(--space-sm);
+}
+
+/* --- Happi avatar --- */
+
+.hero {
+  text-align: center;
+  margin: var(--space-md) 0;
+}
+
+.happi {
+  display: block;
+  background: var(--color-peach);
+  border-radius: 50%;
+}
+
+.hero .happi {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto var(--space-sm);
+}
+
+.topic-happi .happi {
+  width: 72px;
+  height: 72px;
+  margin-bottom: var(--space-xs);
 }
