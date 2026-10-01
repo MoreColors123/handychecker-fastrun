@@ -187,12 +187,17 @@ h2 {
 }
 
 .selfcheck__option {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
   margin: 0 0 var(--space-sm);
 }
 
-/* Tap-Ziele (PWA-02): das Label IST die Tap-Fläche */
+/* Tap-Ziele (PWA-02): Das Label ist die Tap-Fläche und wächst mit. */
 .selfcheck__option label {
-  display: inline-flex;
+  flex: 1 1 auto;
+  display: flex;
   align-items: center;
   min-height: var(--tap-min);
   padding: var(--space-sm) var(--space-md);
@@ -203,13 +208,16 @@ h2 {
 .selfcheck__option label:hover { background: var(--color-peach); }
 
 .selfcheck__option input[type="radio"] {
+  flex: 0 0 auto;
   width: 24px;
   height: 24px;
   accent-color: var(--color-ginger);
 }
 
+/* Die Reflexion bekommt eine eigene Zeile unter dem Label. */
 .selfcheck__option .selfcheck__reflection {
-  margin: var(--space-sm) 0 0;
+  flex-basis: 100%;
+  margin: 0;
   padding: var(--space-sm) var(--space-md);
   background: var(--color-peach);
   border-radius: var(--radius-md);
