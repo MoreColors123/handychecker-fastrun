@@ -30,6 +30,18 @@
     }
   }
 
+  // --- Start-Knopf: Themen erst nach Klick zeigen ----------------------
+  var startBtn = document.querySelector("[data-start]");
+  var picker = document.querySelector("#themen");
+  if (startBtn && picker) {
+    picker.classList.add("is-hidden");
+    startBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      picker.classList.remove("is-hidden");
+      picker.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   // --- gesehene Themen -------------------------------------------------
   var topicEl = document.querySelector("[data-topic]");
   if (topicEl) {

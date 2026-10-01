@@ -37,20 +37,10 @@ eleventyComputed:
       <p>{{ topic.balance.text }}</p>
     </section>
 
-    <section class="selfcheck" aria-labelledby="selfcheck-h">
-      <h2 id="selfcheck-h">Wie ist das bei dir?</h2>
-      <fieldset class="selfcheck__group">
-        <legend>{{ topic.selfCheck.question }}</legend>
-        {% for opt in topic.selfCheck.options %}
-        <div class="selfcheck__option">
-          <input type="radio" id="sc-{{ topic.slug }}-{{ loop.index }}" name="sc-{{ topic.slug }}" value="{{ loop.index }}">
-          <label for="sc-{{ topic.slug }}-{{ loop.index }}">{{ opt.emoji }} {{ opt.label }}</label>
-          <p class="selfcheck__reflection">{{ opt.reflection }}</p>
-        </div>
-        {% endfor %}
-      </fieldset>
-      <p class="selfcheck__live" role="status"></p>
-      <p class="selfcheck-note">Deine Antwort wird nicht gespeichert und nicht gesendet.</p>
+    <section class="check-cta">
+      <h2>Wie ist das bei dir?</h2>
+      <p>Finde es heraus – ohne richtig oder falsch, nur für dich.</p>
+      <p><a class="card card--start" href="{{ ('/themen/' + topic.slug + '/check/') | url }}">▶ Los geht's</a></p>
     </section>
 
     <section class="tips">
@@ -70,7 +60,7 @@ eleventyComputed:
       <p class="next-empty" hidden>Du hast schon alle Themen angeschaut. 🎉 <a href="{{ '/' | url }}" data-reset>Nochmal von vorn</a></p>
     </section>
   </main>
-  <script src="{{ '/js/app.js' | url }}?v=3" defer></script>
+  <script src="{{ '/js/app.js' | url }}?v=4" defer></script>
   {% include "footer.njk" %}
 </body>
 </html>

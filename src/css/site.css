@@ -321,6 +321,14 @@ h2 {
   margin-top: 0;
 }
 
+.start-picker.is-hidden {
+  display: none;
+}
+
+.check-cta {
+  margin: 0 0 var(--space-lg);
+}
+
 .install-link {
   margin-top: var(--space-xl);
   text-align: center;

@@ -1,0 +1,56 @@
+---
+pagination:
+  data: topics
+  size: 1
+  alias: topic
+permalink: "/themen/{{ topic.slug }}/check/index.html"
+eleventyComputed:
+  title: "Wie ist das bei dir? – {{ topic.title | safe }}"
+  suffixTitle: true
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+  <header>
+    <a class="skip" href="#inhalt">Zum Inhalt</a>
+    <nav aria-label="Seitennavigation">
+      <a class="back" href="{{ ('/themen/' + topic.slug + '/') | url }}">‹ {{ topic.title }}</a>
+    </nav>
+  </header>
+  <main id="inhalt" data-topic="{{ topic.slug }}">
+    <div class="topic-happi">{% include "happi.njk" %}</div>
+    <h1>Wie ist das bei dir?</h1>
+    <p class="intro">{{ topic.title }} – schauen wir, wie es bei dir läuft. Es gibt kein richtig oder falsch.</p>
+
+    <section class="selfcheck">
+      <fieldset class="selfcheck__group">
+        <legend>{{ topic.selfCheck.question }}</legend>
+        {% for opt in topic.selfCheck.options %}
+        <div class="selfcheck__option">
+          <input type="radio" id="sc-{{ topic.slug }}-{{ loop.index }}" name="sc-{{ topic.slug }}" value="{{ loop.index }}">
+          <label for="sc-{{ topic.slug }}-{{ loop.index }}">{{ opt.emoji }} {{ opt.label }}</label>
+          <p class="selfcheck__reflection">{{ opt.reflection }}</p>
+        </div>
+        {% endfor %}
+      </fieldset>
+      <p class="selfcheck__live" role="status"></p>
+      <p class="selfcheck-note">Deine Antwort wird nicht gespeichert und nicht gesendet.</p>
+    </section>
+
+    <section class="next">
+      <h2>Womit willst du weitermachen?</h2>
+      <ul class="topic-cards">
+        {% for t in topics %}{% if t.slug != topic.slug %}
+        <li><a class="card" data-slug="{{ t.slug }}" href="{{ ('/themen/' + t.slug + '/') | url }}">{{ t.title }}</a></li>
+        {% endif %}{% endfor %}
+      </ul>
+      <p class="next-empty" hidden>Du hast schon alle Themen angeschaut. 🎉 <a href="{{ '/' | url }}" data-reset>Nochmal von vorn</a></p>
+    </section>
+  </main>
+  <script src="{{ '/js/app.js' | url }}?v=4" defer></script>
+  {% include "footer.njk" %}
+</body>
+</html>
