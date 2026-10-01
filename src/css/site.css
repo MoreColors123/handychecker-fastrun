@@ -196,7 +196,8 @@ h2 {
 
 /* Tap-Ziele (PWA-02): Das Label ist die Tap-Fläche und wächst mit. */
 .selfcheck__option label {
-  flex: 1 1 auto;
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   align-items: center;
   min-height: var(--tap-min);
