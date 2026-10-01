@@ -1,0 +1,69 @@
+---
+title: App aufs Handy
+suffixTitle: true
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+  <header>
+    <a class="skip" href="#inhalt">Zum Inhalt</a>
+    <nav aria-label="Seitennavigation">
+      <a class="back" href="{{ '/' | url }}">‹ Start</a>
+    </nav>
+  </header>
+  <main id="inhalt">
+    <div class="topic-happi">{% include "happi.njk" %}</div>
+    <h1>App aufs Handy</h1>
+    <p class="intro">Hallo, ich bin Happi. 🧡 Wenn du magst, hol dir die Seite auf deinen Startbildschirm. Dann öffnet sie sich wie eine App – mit einem Tipp.
+
+    </p>
+
+    <section class="fact">
+      <h2>Auf Android (Chrome)</h2>
+      <ol>
+        <li>Öffne diese Seite in <strong>Chrome</strong>.</li>
+        <li>Tippe oben rechts auf die <strong>drei Punkte</strong>.</li>
+        <li>Wähle <strong>„App installieren"</strong> oder <strong>„Zum Startbildschirm hinzufügen"</strong>.</li>
+        <li>Bestätige mit <strong>„Installieren"</strong>.</li>
+      </ol>
+      <p>Danach findest du Happi als Icon auf deinem Startbildschirm.</p>
+    </section>
+
+    <section class="fact">
+      <h2>Auf dem iPhone (Safari)</h2>
+      <ol>
+        <li>Öffne diese Seite in <strong>Safari</strong>.</li>
+        <li>Tippe unten auf das <strong>Teilen-Symbol</strong> (das Viereck mit dem Pfeil).</li>
+        <li>Scrolle und wähle <strong>„Zum Home-Bildschirm"</strong>.</li>
+        <li>Tippe oben rechts auf <strong>„Hinzufügen"</strong>.</li>
+      </ol>
+      <p>Fertig – die Seite liegt jetzt als Icon auf dem Startbildschirm.</p>
+    </section>
+
+    <section class="balance">
+      <h2>Wenn es nicht klappt</h2>
+      <p>Gar kein Problem: Du kannst die Seite auch einfach als <strong>Lesezeichen</strong> speichern. Sie funktioniert trotzdem genau gleich.</p>
+    </section>
+
+    <section class="tips">
+      <h2>Gut zu wissen</h2>
+      <ul>
+        <li>Die Seite speichert nichts über dich – auch als App nicht.</li>
+        <li>Du brauchst kein Konto und nichts zu bezahlen.</li>
+        <li>Wenn es eine neue Version gibt, zeigt sie sich beim nächsten Öffnen.</li>
+      </ul>
+    </section>
+
+    <section class="next">
+      <h2>Weiter geht's</h2>
+      <ul class="topic-cards">
+        <li><a class="card" href="{{ '/' | url }}">‹ Zurück zum Start</a></li>
+      </ul>
+    </section>
+  </main>
+  {% include "footer.njk" %}
+</body>
+</html>
