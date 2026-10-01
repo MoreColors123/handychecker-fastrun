@@ -23,20 +23,29 @@ Der Ton ist eine freundliche Begleitung – verkörpert von **Happi**, einer gin
 Katze – und nie ein Vortrag. Die Seite schafft **Awareness**: Sie unterstellt kein Problem,
 bewertet nichts und macht keine Angst.
 
-### Aufbau eines Themas
+### Ablauf
 
-- **Fakten zuerst** – kurze Abschnitte, 2–3 Sätze pro Idee
-- **Balance** – „Was ist daran eigentlich gut?"
-- **Selbstcheck** – „Wie ist das bei dir?" mit beschreibenden Antworten; keine Punktzahl,
-  keine Wertung, nichts wird gespeichert
-- **„Was kann ich tun?"** – 1–3 machbare Tipps als Angebot
-- **„Womit willst du weitermachen?"** – Weiter zu den anderen Themen
+1. **Startseite:** Erst nach Klick auf **▶ Start** erscheinen die Themen – unter der Frage
+   „Welches Thema möchtest du zuerst anschauen?".
+2. **Themenseite** (`/themen/<slug>/`): kurz und knapp – Fakten zuerst, dann
+   „Was ist daran eigentlich gut?", dann **„Wie ist das bei dir?" → ▶ Los geht's**.
+3. **Quizseite** (`/themen/<slug>/check/`): der Selbstcheck. **Nach der Antwort** erscheinen
+   darunter **„Was kann ich tun?"** (Tipps) und **„Womit willst du weitermachen?"**.
+4. **Gesehene Themen** verschwinden aus der Weiter-Liste – das merkt sich das Gerät lokal.
+
+### Selbstcheck
+
+- **Eine** Frage, **vier** beschreibende Antworten (Single-Choice, die anderen verschwinden)
+- Kein richtig/falsch, keine Punktzahl, keine Wertung
+- Läuft im Browser; die **Antworten** werden nicht gespeichert und nicht gesendet
 
 ### Grundsätze
 
 - **Sprache:** nur Deutsch
-- **Datenschutz:** null Datensammlung – keine Konten, kein Tracking, keine Cookies,
-  keine Drittanbieter-Requests (keine CDNs, keine externen Schriften)
+- **Datenschutz:** keine Konten, kein Tracking, keine Cookies, keine Drittanbieter-Requests
+  (keine CDNs, keine externen Schriften). Zur Navigation merkt sich das Gerät lokal
+  (`localStorage`), welche Themen schon gesehen wurden – nur lokal, ohne Personenbezug,
+  nichts wird übertragen.
 - **Statisch und wartbar:** keine Laufzeit-Abhängigkeiten; ein Elternteil kann die Seite
   über Jahre pflegen
 
@@ -44,16 +53,20 @@ bewertet nichts und macht keine Angst.
 
 - **Eleventy (11ty) 3.1.6** als Static-Site-Generator (einzige Dev-Abhängigkeit)
 - Nunjucks-Templates; Inhalte datengetrieben in `src/_data/topics.json`
-- Handgeschriebenes CSS mit Design-Tokens; minimales Vanilla-JS nur für die
-  Screenreader-Ankündigung des Selbstchecks (plus Fallback für Browser ohne `:has()`)
+- Handgeschriebenes CSS mit Design-Tokens
+- Minimales Vanilla-JS (`src/js/app.js`) für: Screenreader-Ankündigung des Selbstchecks
+  (plus Fallback für Browser ohne `:has()`), das Aufdecken der Themen nach „Start" und das
+  lokale Merken gesehener Themen
+- CSS und JS werden versioniert (`?v=…`), damit Updates ankommen
 - **Hosting:** GitHub Pages
 
 ### Struktur
 
 ```
 src/
-  index.njk              Startseite
-  themen.njk             Themen-Template (rendert aus topics.json)
+  index.njk              Startseite (Start-Knopf + Themen)
+  themen.njk             Themenseite je Thema (Fakten + Balance + „Los geht's")
+  themen-check.njk       Quizseite je Thema (Selbstcheck → Tipps → Weiter)
   installieren.njk       „App aufs Handy"
   impressum.njk          Impressum (§5 DDG)
   datenschutz.njk        Kindgerechte Datenschutzerklärung
@@ -84,7 +97,8 @@ npm run build   # baut die Seite nach _site/
 ### Rechtliches
 
 Das Impressum enthält ausschließlich Daten der Eltern, niemals Daten des Kindes. Die Seite
-speichert nichts über Besucherinnen und Besucher.
+überträgt nichts über Besucherinnen und Besucher; lokal wird auf dem Gerät nur gemerkt,
+welche Themen bereits angesehen wurden.
 
 ---
 
@@ -105,35 +119,47 @@ topics, how phones affect us and what helps:
 The tone is a friendly companion – voiced by **Happi**, a ginger cat – never a lecture. The
 site builds **awareness**: it assumes no problem, passes no judgment and never uses fear.
 
-### How each topic is structured
+### Flow
 
-- **Facts first** – short sections, 2–3 sentences per idea
-- **Balance** – "What's actually good about it?"
-- **Self-check** – "How is it for you?" with descriptive answers; no score, no verdict,
-  nothing stored
-- **"What can I do?"** – 1–3 doable tips, offered as suggestions
-- **"What would you like to continue with?"** – links to the other topics
+1. **Home:** topics appear only after tapping **▶ Start**, under the question
+   "Which topic would you like to look at first?".
+2. **Topic page** (`/themen/<slug>/`): short – facts first, then "What's actually good about
+   it?", then **"How is it for you?" → ▶ Let's go**.
+3. **Quiz page** (`/themen/<slug>/check/`): the self-check. **After answering**, "What can I
+   do?" (tips) and "What would you like to continue with?" appear below.
+4. **Seen topics** disappear from the "continue" list – remembered locally on the device.
+
+### Self-check
+
+- **One** question, **four** descriptive answers (single choice; the others disappear)
+- No right/wrong, no score, no verdict
+- Runs in the browser; the **answers** are neither stored nor transmitted
 
 ### Principles
 
 - **Language:** German only
-- **Privacy:** zero data collection – no accounts, no tracking, no cookies, no third-party
-  requests (no CDNs, no external fonts)
+- **Privacy:** no accounts, no tracking, no cookies, no third-party requests (no CDNs, no
+  external fonts). For navigation, the device remembers locally (`localStorage`) which
+  topics have been seen – on-device only, with no personal reference, nothing transmitted.
 - **Static and durable:** no runtime dependencies; a parent can maintain it for years
 
 ### Stack
 
 - **Eleventy (11ty) 3.1.6** static site generator (the only dev dependency)
 - Nunjucks templates; content is data-driven from `src/_data/topics.json`
-- Hand-written CSS with design tokens; a tiny bit of vanilla JS only to announce the
-  self-check to screen readers (plus a fallback for browsers without `:has()`)
+- Hand-written CSS with design tokens
+- A tiny bit of vanilla JS (`src/js/app.js`) for: screen-reader announcement of the
+  self-check (plus a fallback for browsers without `:has()`), revealing the topics after
+  "Start", and remembering seen topics locally
+- CSS and JS are versioned (`?v=…`) so updates actually arrive
 - **Hosting:** GitHub Pages
 
 ### Structure
 
 See the file tree in the German section above. Key files: `src/_data/topics.json` holds all
-five topics; `src/themen.njk` renders one page per topic; `VOICE-SPEC.md` defines the voice
-and content rules; `PROJECT-HANDOFF.md` is the full handoff.
+five topics; `src/themen.njk` renders a topic page and `src/themen-check.njk` a quiz page per
+topic; `VOICE-SPEC.md` defines the voice and content rules; `PROJECT-HANDOFF.md` is the full
+handoff.
 
 ### Develop
 
@@ -146,4 +172,5 @@ npm run build   # build the site into _site/
 ### Legal
 
 The Impressum (German legal notice) contains the parent's data only, never the child's. The
-site stores nothing about its visitors.
+site transmits nothing about its visitors; it only remembers locally, on the device, which
+topics have already been viewed.
