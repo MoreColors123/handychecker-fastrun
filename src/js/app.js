@@ -25,10 +25,11 @@
       var label = option.querySelector("label");
       var reflection = option.querySelector(".selfcheck__reflection");
 
-      // Fallback für Engines ohne :has(): nur die gewählte Reflexion zeigen.
+      // Fallback für Engines ohne :has(): andere Antworten ausblenden,
+      // die gewählte Antwort samt Reflexion stehen lassen.
       if (!hasHas) {
-        group.querySelectorAll(".selfcheck__reflection").forEach(function (r) {
-          r.style.display = "none";
+        group.querySelectorAll(".selfcheck__option").forEach(function (o) {
+          o.style.display = o === option ? "" : "none";
         });
         if (reflection) reflection.style.display = "block";
       }

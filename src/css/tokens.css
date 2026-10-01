@@ -21,7 +21,7 @@
   --font-base: 18px;            /* ≥16px floor for 10–12 readers */
   --font-scale-sm: 0.875;
   --font-scale-md: 1.125;
-  --font-scale-h2: 0.81;        /* 60 % des vorherigen Werts (war 1.35) */
+  --font-scale-h2: 1;           /* Abschnitts-Überschriften, wie Fließtext */
   --font-scale-lg: 1.5;
   --font-scale-xl: 2;
 

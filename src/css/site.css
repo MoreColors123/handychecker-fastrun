@@ -166,6 +166,10 @@ h2 {
 .selfcheck__reflection { display: none; }
 .selfcheck__option:has(input:checked) .selfcheck__reflection { display: block; }
 
+/* Nur die gewählte Antwort bleibt stehen: die übrigen Optionen verschwinden,
+   sobald eine Antwort gewählt ist (Single-Choice, keine Bewertung). */
+.selfcheck__group:has(input:checked) .selfcheck__option:not(:has(input:checked)) { display: none; }
+
 /* Der Selbstcheck liest sich als eine freundliche Karte */
 .selfcheck {
   background: var(--color-card-bg);
