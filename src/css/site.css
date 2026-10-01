@@ -329,6 +329,15 @@ h2 {
   margin: 0 0 var(--space-lg);
 }
 
+/* Nach der Quiz-Antwort erscheinen Tipps + Weiter (Quizseite). */
+.check-page .after-quiz {
+  display: none;
+}
+
+.check-page:has(.selfcheck__option input:checked) .after-quiz {
+  display: block;
+}
+
 .install-link {
   margin-top: var(--space-xl);
   text-align: center;

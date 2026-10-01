@@ -42,25 +42,8 @@ eleventyComputed:
       <p>Finde es heraus – ohne richtig oder falsch, nur für dich.</p>
       <p><a class="card card--start" href="{{ ('/themen/' + topic.slug + '/check/') | url }}">▶ Los geht's</a></p>
     </section>
-
-    <section class="tips">
-      <h2>Was kann ich tun?</h2>
-      <ul>
-        {% for tip in topic.tips %}<li>{{ tip }}</li>{% endfor %}
-      </ul>
-    </section>
-
-    <section class="next">
-      <h2>Womit willst du weitermachen?</h2>
-      <ul class="topic-cards">
-        {% for t in topics %}{% if t.slug != topic.slug %}
-        <li><a class="card" data-slug="{{ t.slug }}" href="{{ ('/themen/' + t.slug + '/') | url }}">{{ t.title }}</a></li>
-        {% endif %}{% endfor %}
-      </ul>
-      <p class="next-empty" hidden>Du hast schon alle Themen angeschaut. 🎉 <a href="{{ '/' | url }}" data-reset>Nochmal von vorn</a></p>
-    </section>
   </main>
-  <script src="{{ '/js/app.js' | url }}?v=4" defer></script>
+  <script src="{{ '/js/app.js' | url }}?v=5" defer></script>
   {% include "footer.njk" %}
 </body>
 </html>

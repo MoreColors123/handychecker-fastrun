@@ -108,6 +108,10 @@
         if (reflection) text += " – " + reflection.textContent.trim();
         live.textContent = text; // announced; nothing stored, nothing sent
       }
+
+      // Nach der Antwort erscheinen Tipps + Weiter auf der Quizseite.
+      var after = document.querySelector(".check-page .after-quiz");
+      if (after) after.style.display = "block";
     });
   });
 })();
