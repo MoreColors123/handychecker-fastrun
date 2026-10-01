@@ -37,18 +37,19 @@ eleventyComputed:
       <p>{{ topic.balance.text }}</p>
     </section>
 
-    <section class="selfcheck">
-      <h2>Wie ist das bei dir?</h2>
-      <fieldset>
+    <section class="selfcheck" aria-labelledby="selfcheck-h">
+      <h2 id="selfcheck-h">Wie ist das bei dir?</h2>
+      <fieldset class="selfcheck__group">
         <legend>{{ topic.selfCheck.question }}</legend>
         {% for opt in topic.selfCheck.options %}
-        <div class="selfcheck-option">
-          <input type="radio" name="sc-{{ topic.slug }}" id="sc-{{ topic.slug }}-{{ loop.index }}">
+        <div class="selfcheck__option">
+          <input type="radio" id="sc-{{ topic.slug }}-{{ loop.index }}" name="sc-{{ topic.slug }}" value="{{ loop.index }}">
           <label for="sc-{{ topic.slug }}-{{ loop.index }}">{{ opt.emoji }} {{ opt.label }}</label>
-          <p class="selfcheck-reflection">{{ opt.reflection }}</p>
+          <p class="selfcheck__reflection">{{ opt.reflection }}</p>
         </div>
         {% endfor %}
       </fieldset>
+      <p class="selfcheck__live" role="status"></p>
       <p class="selfcheck-note">Deine Antwort wird nicht gespeichert und nicht gesendet.</p>
     </section>
 
@@ -60,14 +61,15 @@ eleventyComputed:
     </section>
 
     <section class="next">
-      <h2>Weiter geht's</h2>
+      <h2>Womit willst du weitermachen?</h2>
       <ul class="topic-cards">
-        {% for t in topics %}{% if t.slug in topic.next %}
+        {% for t in topics %}{% if t.slug != topic.slug %}
         <li><a class="card" href="{{ ('/themen/' + t.slug + '/') | url }}">{{ t.title }}</a></li>
         {% endif %}{% endfor %}
       </ul>
     </section>
   </main>
+  <script src="{{ '/js/app.js' | url }}" defer></script>
   {% include "footer.njk" %}
 </body>
 </html>
