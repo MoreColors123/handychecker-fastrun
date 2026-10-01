@@ -59,8 +59,7 @@ npm run dev     # lokaler Dev-Server
 npm run build   # baut nach _site/
 ```
 
-Weitere Doku im Repo: `VOICE-SPEC.md` (Stimme & Inhaltsregeln), `PROJECT-HANDOFF.md`
-(ursprüngliche Übergabe, englisch).
+Weitere Doku im Repo: `VOICE-SPEC.md` (Stimme & Inhaltsregeln).
 
 ---
 
