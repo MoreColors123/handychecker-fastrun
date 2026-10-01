@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
 
   return {
-    pathPrefix: "/handychecker/", // adjust to final repo name; "/" for user-site/Cloudflare
+    pathPrefix: "/handychecker-fastrun/", // adjust to final repo name; "/" for user-site/Cloudflare
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     templateFormats: ["njk", "html", "md"],
     htmlTemplateEngine: "njk",
