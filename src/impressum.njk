@@ -1,0 +1,27 @@
+---
+title: Impressum
+suffixTitle: true
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  {% include "head.njk" %}
+</head>
+<body>
+  <header>
+    <a class="skip" href="#inhalt">Zum Inhalt</a>
+    <a class="card" href="{{ '/' | url }}">← Start</a>
+  </header>
+  <main id="inhalt">
+    <h1>Impressum</h1>
+    <p>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz).</p>
+    <address>
+      [Name der Eltern], [Straße und Hausnummer]<br>
+      [PLZ] [Ort], Deutschland
+    </address>
+    <p>Kontakt: [E-Mail-Adresse der Eltern]</p>
+  </main>
+  <!-- TODO: Eltern – hier bitte echte Daten eintragen, bevor die URL geteilt wird (statt der Platzhalter in eckigen Klammern). -->
+  {% include "footer.njk" %}
+</body>
+</html>
